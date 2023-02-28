@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/slide_4" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Screen4">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="10dp"
+            android:fitsSystemWindows="true"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/box_1"
+            tools:layout_editor_absoluteX="0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="23sp"
+                android:layout_marginTop="19dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/settings"
+                android:background="@drawable/settings_33"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
+                app:layout_constraintVertical_bias="0.685" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/box_1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/shadow_background"
+            android:drawingCacheQuality="auto"
+            app:layout_constraintBottom_toTopOf="@+id/box_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/power"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="@string/power"
+            android:drawableTop="@drawable/power"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_1"
+            app:layout_constraintEnd_toStartOf="@+id/door"
+            app:layout_constraintHorizontal_bias="0.269"
+            app:layout_constraintStart_toStartOf="@+id/box_1"
+            app:layout_constraintTop_toTopOf="@+id/box_1"
+            app:layout_constraintVertical_bias="0.437" />
+
+        <Button
+            android:id="@+id/door"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="@string/power"
+            android:drawableTop="@drawable/door"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_1"
+            app:layout_constraintEnd_toEndOf="@+id/box_1"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/box_1"
+            app:layout_constraintTop_toTopOf="@+id/box_1"
+            app:layout_constraintVertical_bias="0.437" />
+
+        <Button
+            android:id="@+id/add_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="@string/power"
+            android:drawableTop="@drawable/add"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_1"
+            app:layout_constraintEnd_toEndOf="@+id/box_1"
+            app:layout_constraintHorizontal_bias="0.705"
+            app:layout_constraintStart_toEndOf="@+id/door"
+            app:layout_constraintTop_toTopOf="@+id/box_1"
+            app:layout_constraintVertical_bias="0.437" />
+
+        <TextView
+            android:id="@+id/alloff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.70"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/text_all_off"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_1"
+            app:layout_constraintEnd_toEndOf="@+id/power"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="@+id/power"
+            app:layout_constraintTop_toBottomOf="@+id/power" />
+
+        <TextView
+            android:id="@+id/door_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.70"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/door_lock"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_1"
+            app:layout_constraintEnd_toEndOf="@+id/door"
+            app:layout_constraintStart_toStartOf="@+id/door"
+            app:layout_constraintTop_toBottomOf="@+id/door" />
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.70"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/add"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_1"
+            app:layout_constraintEnd_toEndOf="@+id/add_1"
+            app:layout_constraintStart_toStartOf="@+id/add_1"
+            app:layout_constraintTop_toBottomOf="@+id/add_1" />
+
+        <View
+            android:id="@+id/box_2"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shadow_background"
+            app:layout_constraintBottom_toTopOf="@+id/box_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/living_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.70"
+            android:fontFamily="@font/inter_semibold"
+            android:text="living room"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_2"
+            app:layout_constraintEnd_toEndOf="@+id/box_2"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/box_2"
+            app:layout_constraintTop_toTopOf="@+id/box_2"
+            app:layout_constraintVertical_bias="0.087" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:track="@drawable/switch_track"
+            android:thumb="@drawable/switch_thumb"
+            app:layout_constraintBottom_toBottomOf="@+id/box_2"
+            app:layout_constraintEnd_toEndOf="@+id/box_2"
+            app:layout_constraintTop_toTopOf="@+id/box_2"
+             />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/livingroom"
+            android:contentDescription="@string/living_room"
+            app:layout_constraintBottom_toBottomOf="@+id/box_2"
+            app:layout_constraintEnd_toStartOf="@+id/switch_1"
+            app:layout_constraintHorizontal_bias="0.116"
+            app:layout_constraintStart_toStartOf="@+id/box_2"
+            app:layout_constraintTop_toTopOf="@+id/box_2"
+            app:layout_constraintVertical_bias="0.547" />
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="315dp"
+            android:layout_height="1dp"
+            android:alpha="0.30"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/box_2"
+            app:layout_constraintEnd_toEndOf="@+id/box_2"
+            app:layout_constraintStart_toStartOf="@+id/box_2"
+            app:layout_constraintTop_toBottomOf="@+id/living_room"
+            app:layout_constraintVertical_bias="0.798" />
+
+        <View
+            android:id="@+id/box_3"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shadow_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/box_2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/box_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.463" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.70"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/bed_room_1"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/box_3"
+            app:layout_constraintEnd_toEndOf="@+id/box_3"
+            app:layout_constraintHorizontal_bias="0.581"
+            app:layout_constraintStart_toStartOf="@+id/box_3"
+            app:layout_constraintTop_toTopOf="@+id/box_3"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <ImageView
+            android:id="@+id/bed_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bedroom"
+            android:contentDescription="@string/bedroom1"
+            app:layout_constraintBottom_toBottomOf="@+id/box_3"
+            app:layout_constraintEnd_toStartOf="@+id/switch_2"
+            app:layout_constraintHorizontal_bias="0.201"
+            app:layout_constraintStart_toStartOf="@+id/box_3"
+            app:layout_constraintTop_toTopOf="@+id/box_3"
+            app:layout_constraintVertical_bias="0.547" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/switch_thumb"
+            app:layout_constraintBottom_toBottomOf="@+id/box_3"
+            app:layout_constraintEnd_toEndOf="@+id/box_3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/box_3"
+            app:layout_constraintTop_toTopOf="@+id/box_3"
+            app:layout_constraintVertical_bias="0.507"
+            app:track="@drawable/switch_track" />
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="315dp"
+            android:layout_height="1dp"
+            android:alpha="0.30"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/box_3"
+            app:layout_constraintEnd_toEndOf="@+id/box_3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/box_3"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.801" />
+
+        <View
+            android:id="@+id/box_4"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shadow_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/box_3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/box_3"
+            app:layout_constraintTop_toBottomOf="@+id/box_3"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="0.70"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/bed_room_2"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="@+id/box_4"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/box_4"
+            app:layout_constraintTop_toTopOf="@+id/box_4" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:thumb="@drawable/switch_thumb"
+            app:layout_constraintEnd_toEndOf="@+id/box_4"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="@+id/box_4"
+            app:layout_constraintTop_toTopOf="@+id/box_4"
+            app:track="@drawable/switch_track" />
+
+        <ImageView
+            android:id="@+id/bedroom_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bedroom2"
+            app:layout_constraintBottom_toBottomOf="@+id/box_4"
+            app:layout_constraintEnd_toStartOf="@+id/switch_3"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="@+id/box_4"
+            app:layout_constraintTop_toTopOf="@+id/box_4"
+            app:layout_constraintVertical_bias="0.49"
+            app:srcCompat="@drawable/bedroom" />
+
+
+        <View
+            android:id="@+id/line6"
+            android:layout_width="315dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="100dp"
+            android:alpha="0.30"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/box_4"
+            app:layout_constraintStart_toStartOf="@+id/box_4"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <View
+            android:id="@+id/box_5"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shadow_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/box_4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/box_4"
+            app:layout_constraintTop_toBottomOf="@+id/box_4"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
